@@ -1,9 +1,11 @@
 # Arquitecturaweb
 El negocio para la api va a ser un sistema de turnos medicos, los usuarios podran registrar medicos, pacientes y reservar turnos
 # Instrucciones de Ejecucion:
+(Puerto(3000))
 1) cd turnera-api
 2) npm install
 3) npm run dev
+El servidor estará corriendo en: http://localhost:3000
 
 # Entidades:
 * Medico: datos de los medicos(id, nombre, apellido,dni,especialidad)
