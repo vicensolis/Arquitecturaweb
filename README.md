@@ -12,17 +12,17 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
 
 # Endpoints: 
 ## Medico (/api/medicos):
-          *GET /api/medicos
+* GET /api/medicos
           
-          *GET /api/medicos/:id 
+* GET /api/medicos/:id
+
+* POST /api/medicos
           
-          *POST /api/medicos
+* PUT /api/medicos/:id 
           
-          *PUT /api/medicos/:id 
+* DELETE /api/medicos/:id
           
-          *DELETE /api/medicos/:id
-          
-          *GET /api/medicos/:id/turnos
+* GET /api/medicos/:id/turnos
           
           
 ## Paciente (/api/pacientes)
