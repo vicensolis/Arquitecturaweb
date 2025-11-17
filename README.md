@@ -19,8 +19,8 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
 * GET /api/medicos/:id -> Obtiene medicos por id
 
 * POST /api/medicos -> Crea un nuevo medico
-  ```body:
-  - {
+  ```body ejemplo:
+  {
         "nombre": "Pablo",
         "apellido": "Ledesma",
         "dni":47894321,
