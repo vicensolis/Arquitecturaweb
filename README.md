@@ -5,7 +5,7 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
 1) cd turnera-api
 2) npm install
 3) npm run dev
-El servidor estará corriendo en: http://localhost:3000
+- El servidor estará corriendo en: http://localhost:3000
 
 # Entidades:
 * Medico: datos de los medicos(id, nombre, apellido,dni,especialidad)
@@ -22,7 +22,7 @@ El servidor estará corriendo en: http://localhost:3000
 
 * POST /api/medicos
   - Crea un nuevo medico
-        body
+        - body
         {
         "nombre": "Pablo",
         "apellido": "Costa",
