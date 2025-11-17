@@ -14,10 +14,8 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
 
 # Endpoints: 
 ## Medico (/api/medicos):
-* GET /api/medicos -> Lista todos los medicos
-          
+* GET /api/medicos -> Lista todos los medicos      
 * GET /api/medicos/:id -> Obtiene medicos por id
-
 * POST /api/medicos -> Crea un nuevo medico
   - Body ejemplo:
   ```
@@ -26,8 +24,7 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
         "apellido": "Ledesma",
         "dni":47894321,
         "especialidad": "Dermatologo"
-        }
-          
+        } 
 * PUT /api/medicos/:id -> Actualiza los datos de un medico que ya existe
   - Body ejemplo:
     ```
@@ -36,8 +33,7 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
           "apellido": "Ledesma",
           "dni":47894321,
           "especialidad": "Traumatologo"
-    }
-          
+    }       
 * DELETE /api/medicos/:id -> Elimina un medico
 * GET /api/medicos/:id/turnos -> Lista los turnos de un medico
           
@@ -58,7 +54,7 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
 
 
 ## Turnos (/api/turnos)
-GET /api/turnos -> Devuelve la lista completa de los turnos
-GET /api/turnos/:id -> Devuelve los turnos especificos por id
-POST /api/turnos -> Crea un turno
-PUT /api/turnos/:id/cancelar -> Cambia el estado del turno a cancelado
+* GET /api/turnos -> Devuelve la lista completa de los turnos
+* GET /api/turnos/:id -> Devuelve los turnos especificos por id
+* POST /api/turnos -> Crea un turno
+* PUT /api/turnos/:id/cancelar -> Cambia el estado del turno a cancelado
