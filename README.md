@@ -57,4 +57,13 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
 * GET /api/turnos -> Devuelve la lista completa de los turnos
 * GET /api/turnos/:id -> Devuelve los turnos especificos por id
 * POST /api/turnos -> Crea un turno
+- Body ejemplo:
+  ```
+  {
+      "idMedico": 2,
+      "idPaciente": 1,
+      "fechaHora": "2025-12-15T12:00:00Z",
+      "estado": "CONFIRMADO"
+  }
+  
 * PUT /api/turnos/:id/cancelar -> Cambia el estado del turno a cancelado
