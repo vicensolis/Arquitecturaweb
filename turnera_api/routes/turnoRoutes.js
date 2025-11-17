@@ -14,7 +14,7 @@ router.get('/:id', turnoController.getTurnosById);
 // POST /api/turnos
 router.post("/", turnoController.createTurno);
 
-// PUT /api/turnos/:id/cancelar
-router.put("/:id/cancelar", turnoController.cancelarTurno);
+// PATCH /api/turnos/:id
+router.patch("/:id", turnoController.actualizarEstadoTurno);
 
 export default router;

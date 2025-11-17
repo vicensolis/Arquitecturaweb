@@ -39,18 +39,22 @@ export class TurnoController {
     }
   }
 
-  // PUT/PATCH /api/turnos/:id/cancelar
-  cancelarTurno = async (req, res) => {
-    try{
-      const id = req.params.id;
-      const nuevoEstado = 'CANCELADO'; 
-      const responseBody = await this.turnosService.updateEstado(id, nuevoEstado);
-      res.status(200).json(responseBody);    
+  // PATCH /api/turnos/:id
+  actualizarEstadoTurno = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const { estado } = req.body;
+
+    if (!estado) {
+      return res.status(400).json({ message: "El campo 'estado' es obligatorio." });
     }
-    catch (error) {
-      this.manejarErrores(res, error);
-    }
+
+    const responseBody = await this.turnosService.updateEstado(id, estado);
+    res.status(200).json(responseBody);
+  } catch (error) {
+    this.manejarErrores(res, error);
   }
+}
 
   // DELETE /api/turnos/:id 
   deleteTurno = async(req, res) => {
