@@ -61,7 +61,7 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
   ```
   {
       "idMedico": 2,
-      "idPaciente": 1,
+      "idPaciente": 3,
       "fechaHora": "2025-12-15T12:00:00Z",
       "estado": "CONFIRMADO"
   }
