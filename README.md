@@ -1,5 +1,6 @@
 # Arquitecturaweb
 El negocio para la api va a ser un sistema de turnos medicos, los usuarios podran registrar medicos, pacientes y reservar turnos
+* Tecnologias del Backend: Node.js / Express
 # Instrucciones de Ejecucion:
 (Puerto(3000))
 1) cd turnera-api
@@ -57,4 +58,19 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
 * GET /api/turnos -> Devuelve la lista completa de los turnos
 * GET /api/turnos/:id -> Devuelve los turnos especificos por id
 * POST /api/turnos -> Crea un turno
-* PUT /api/turnos/:id/cancelar -> Cambia el estado del turno a cancelado
+- Body ejemplo:
+  ```
+    {
+    "idmedico": 3,
+    "idpaciente": 2,
+    "fechahora": "2025-12-20T14:00:00Z"
+  }
+  
+* PUT /api/turnos/:id -> Cambia el estado del turno a cancelado
+- Body ejemplo:
+  ```
+    {
+      "estado": "CANCELADO"
+    }
+# Casos de pruebas postman
+*
