@@ -20,13 +20,13 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
 
 * POST /api/medicos
   - Crea un nuevo medico
-    body
-    {
-    "nombre": "Pablo",
-    "apellido": "Costa",
-    "dni":47894321,
-    "especialidad": "Dermatologo"
-    }
+        body
+        {
+        "nombre": "Pablo",
+        "apellido": "Costa",
+        "dni":47894321,
+        "especialidad": "Dermatologo"
+        }
           
 * PUT /api/medicos/:id
   - Actualiza los datos de un medico que ya existe
