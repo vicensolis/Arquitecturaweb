@@ -66,7 +66,7 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
     "fechahora": "2025-12-20T14:00:00Z"
   }
   
-* PUT /api/turnos/:id -> Cambia el estado del turno a cancelado
+* PATCH /api/turnos/:id -> Cambia el estado del turno a cancelado
 - Body ejemplo:
   ```
     {
