@@ -14,34 +14,46 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
 
 # Endpoints: 
 ## Medico (/api/medicos):
-* GET /api/medicos
-  - Lista todos los medicos
+* GET /api/medicos -> Lista todos los medicos
           
-* GET /api/medicos/:id
-  - Obtiene medicos por id
+* GET /api/medicos/:id -> Obtiene medicos por id
 
-* POST /api/medicos
-  - Crea un nuevo medico
-  - body:
+* POST /api/medicos -> Crea un nuevo medico
+  -> body:
   - {
         "nombre": "Pablo",
-        "apellido": "Costa",
+        "apellido": "Ledesma",
         "dni":47894321,
         "especialidad": "Dermatologo"
         }
           
-* PUT /api/medicos/:id
-  - Actualiza los datos de un medico que ya existe
+* PUT /api/medicos/:id -> Actualiza los datos de un medico que ya existe
+  -> Body: {
+          "nombre": "Pablo",
+          "apellido": "Ledesma",
+          "dni":47894321,
+          "especialidad": "Traumatologo"
+    }
           
-* DELETE /api/medicos/:id
-  - Elimina un medico 
-* GET /api/medicos/:id/turnos
-  -Lista los turnos de un medico
+* DELETE /api/medicos/:id -> Elimina un medico
+* GET /api/medicos/:id/turnos -> Lista los turnos de un medico
           
           
 ## Paciente (/api/pacientes)
-
+* GET /api/pacientes -> Devuelve la lista de los pacientes
+* GET /api/pacientes/:id -> Devuelve paciente por id
+* POST /api/pacientes -> Crea un paciente
+  -> Body: {
+      "nombre": "Marcelo",
+      "apellido": "Meli",
+      "dni":47894456,
+  }
+* PUT /api/pacientes/:id -> Actualiza datos de un paciente especifico por id
+* DELETE /api/pacientes/:id -> Elimina un paciente por su id especifico
 
 
 ## Turnos (/api/turnos)
-
+GET /api/turnos -> Devuelve la lista completa de los turnos
+GET /api/turnos/:id -> Devuelve los turnos especificos por id
+POST /api/turnos -> Crea un turno
+PUT /api/turnos/:id/cancelar -> Cambia el estado del turno a cancelado
