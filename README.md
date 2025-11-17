@@ -19,7 +19,7 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
 * GET /api/medicos/:id -> Obtiene medicos por id
 
 * POST /api/medicos -> Crea un nuevo medico
-  - body ejemplo:
+  - Body ejemplo:
   ```
   {
         "nombre": "Pablo",
@@ -29,7 +29,9 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
         }
           
 * PUT /api/medicos/:id -> Actualiza los datos de un medico que ya existe
-  -> Body: {
+  - Body ejemplo:
+    ```
+    {
           "nombre": "Pablo",
           "apellido": "Ledesma",
           "dni":47894321,
@@ -44,7 +46,9 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
 * GET /api/pacientes -> Devuelve la lista de los pacientes
 * GET /api/pacientes/:id -> Devuelve paciente por id
 * POST /api/pacientes -> Crea un paciente
-  -> Body: {
+  - Body ejemplo:
+  ```
+  {
       "nombre": "Marcelo",
       "apellido": "Meli",
       "dni":47894456,
