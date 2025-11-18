@@ -4,7 +4,7 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
 * Base de datos: se esta simulando una base de datos usando archivos .mock.js
 # Instrucciones de Ejecucion:
 (Puerto(3000))
-1) cd turnera-api
+1) cd turnera_api
 2) npm install
 3) npm run dev
 - El servidor estará corriendo en: http://localhost:3000
