@@ -17,6 +17,7 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
 
 # Endpoints: 
 ## Health Check (/health)
+- Verifica que la API funciona
 * Respuesta: 200:
   ```
   {
