@@ -1,6 +1,7 @@
 # Arquitecturaweb
 El negocio para la api va a ser un sistema de turnos medicos, los usuarios podran registrar medicos, pacientes y reservar turnos
 * Tecnologias del Backend: Node.js / Express
+* Base de datos: se esta simulando una base de datos usando archivos .mock.js
 # Instrucciones de Ejecucion:
 (Puerto(3000))
 1) cd turnera-api
