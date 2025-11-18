@@ -17,4 +17,7 @@ router.post("/", turnoController.createTurno);
 // PATCH /api/turnos/:id
 router.patch("/:id", turnoController.actualizarEstadoTurno);
 
+// DELETE /api/turnos/:id
+router.delete("/:id", turnoController.deleteTurno);
+
 export default router;
