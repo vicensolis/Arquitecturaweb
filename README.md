@@ -51,7 +51,7 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
   - Body ejemplo:
     ```
     {
-          "nombre": "Pablo",
+          "nombre": "Juan",
           "apellido": "Ledesma",
           "dni":47894321,
           "especialidad": "Traumatologo"
