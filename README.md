@@ -17,9 +17,9 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
 # Endpoints: 
 ## Medico (/api/medicos):
 * GET /api/medicos -> Lista todos los medicos
-  - Respuesta: 200: [{nombre,apellido,dni,especialidad}]      
+  - Respuesta: 200 -> {nombre,apellido,dni,especialidad}     
 * GET /api/medicos/:id -> Obtiene medicos por id
-  - Respuesta: 200: [{nombre,apellido,dni,especialidad}]
+  - Respuesta: 200 -> {nombre,apellido,dni,especialidad}
   - Error: 404 -> Medico no encontrado
 * POST /api/medicos -> Crea un nuevo medico
   - Body ejemplo:
@@ -45,7 +45,7 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
     }
   - Respuesta:
   - Respuesta: 200 -> Médico actualizado
-  - Error: 400 -> Faltan campos
+  - Error: 400 -> Faltan campos obligatorios
   - Error: 404 -> Médico no encontrado
 
 * DELETE /api/medicos/:id -> Elimina un medico
@@ -56,14 +56,13 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
   - Respuesta: 200 -> Array de turnos del médico
   - Error: 404 -> Médico no encontrado
           
-          
 ## Paciente (/api/pacientes)
 * GET /api/pacientes -> Devuelve la lista de los pacientes
-  - Respuesta: 200 -> Array de todos los pacientes
+  - Respuesta: 200 -> {id, nombre, apellido,dni}
   - Error: ninguno
     
 * GET /api/pacientes/:id -> Devuelve paciente por id
-  - Respuesta: 200 -> Paciente con id especificado
+  - Respuesta: 200 -> {id, nombre, apellido,dni}
   - Error: 404 -> Paciente no encontrado
 
 * POST /api/pacientes -> Crea un paciente
@@ -93,14 +92,15 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
 * DELETE /api/pacientes/:id -> Elimina un paciente por su id especifico
   - Respuesta: 204 -> Paciente eliminado
   - Error: 404 -> Paciente no encontrado
+  - 
 ## Turnos (/api/turnos)
 * GET /api/turnos -> Devuelve la lista completa de los turnos
-  - Respuesta: 200 → Array de todos los turnos
+  - Respuesta: 200 -> {id,idmedico,idpaciente, fechahora, estado}
   - Error: ninguno
     
-* GET /api/turnos/:id -> Devuelve los turnos especificos por id
-  - Respuesta: 200 → Turno con id especificado
-  - Error: 404 → Turno no encontrado
+* GET /api/turnos/:id -> Devuelve el turno especifico por id
+  - Respuesta: 200 -> {id,idmedico,idpaciente, fechahora, estado}
+  - Error: 404 -> Turno no encontrado
     
 * POST /api/turnos -> Crea un turno
   - Body ejemplo:
@@ -110,10 +110,10 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
       "idpaciente": 2,
       "fechahora": "2025-12-20T14:00:00Z"
     }
-  - Respuesta: 201 → Turno creado
-  - Error: 400 → Faltan campos
-  - Error: 409 → Médico no disponible en esa fecha/hora
-  - Error: 400 → Médico o paciente inexistente
+  - Respuesta: 201 -> Turno creado
+  - Error: 400 -> Faltan campos
+  - Error: 409 -> Médico no disponible en esa fecha/hora
+  - Error: 400 -> Médico o paciente inexistente
   
 * PATCH /api/turnos/:id -> Cambia el estado del turno a cancelado
   - Body ejemplo:
@@ -121,10 +121,10 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
       {
         "estado": "CANCELADO"
       }
-  - Respuesta: 200 → Turno actualizado (estado modificado)
-  - Error: 400 → Falta el campo "estado" o estado inválido
-  - Error: 404 → Turno no encontrado
-
-  
-# Casos de pruebas postman
-*
+  - Respuesta: 200 -> Turno actualizado (estado modificado)
+  - Error: 400 -> Falta el campo "estado" o estado inválido
+  - Error: 404 -> Turno no encontrado
+    
+* DELETE /api/turnos/:id -> Elimina turno
+  - Respuesta: 204 -> Turno eliminado
+  - Error: 404 -> Turno no encontrado
