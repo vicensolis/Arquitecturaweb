@@ -2,6 +2,7 @@
 El negocio para la api va a ser un sistema de turnos medicos, los usuarios podran registrar medicos, pacientes y reservar turnos
 * Tecnologias del Backend: Node.js / Express
 * Base de datos: se esta simulando una base de datos usando archivos .mock.js
+  
 # Instrucciones de Ejecucion:
 (Puerto(3000))
 1) cd turnera_api
@@ -15,6 +16,16 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
 * Turnos: informacion sobre el turno (id,idmedico,idpaciente, fechahora, estado)
 
 # Endpoints: 
+## Health Check (/health)
+* Respuesta: 200:
+  ```
+  {
+      "status": "OK",
+      "message": "API de Turnos Médicos funcionando correctamente",
+      "timestamp": "2025-11-18T04:12:49.125Z"
+  }
+  ```
+  
 ## Medico (/api/medicos):
 * GET /api/medicos -> Lista todos los medicos
   - Respuesta: 200 -> {nombre,apellido,dni,especialidad}     
@@ -30,6 +41,7 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
           "dni":47894321,
           "especialidad": "Dermatologo"
           }
+    ```
   - Respuesta: 201-> Medico creado
   - Error: 400 -> Faltan campos
   - Error 409 -> DNI repetido
@@ -43,6 +55,7 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
           "dni":47894321,
           "especialidad": "Traumatologo"
     }
+    ```
   - Respuesta:
   - Respuesta: 200 -> Médico actualizado
   - Error: 400 -> Faltan campos obligatorios
@@ -73,6 +86,7 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
           "apellido": "Meli",
           "dni":47894456
       }
+      ```
   - Respuesta: 201 -> Paciente creado
   - Error: 400 -> Faltan campos
   - Error: 409 -> DNI repetido
@@ -85,6 +99,7 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
           "apellido": "Meli",
           "dni":47894456
       }
+      ```
   - Respuesta: 200 -> Paciente actualizado
   - Error: 400 -> Faltan campos
   - Error: 404 -> Paciente no encontrado
@@ -110,6 +125,7 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
       "idpaciente": 2,
       "fechahora": "2025-12-20T14:00:00Z"
     }
+    ```
   - Respuesta: 201 -> Turno creado
   - Error: 400 -> Faltan campos
   - Error: 409 -> Médico no disponible en esa fecha/hora
@@ -121,6 +137,7 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
       {
         "estado": "CANCELADO"
       }
+    ```
   - Respuesta: 200 -> Turno actualizado (estado modificado)
   - Error: 400 -> Falta el campo "estado" o estado inválido
   - Error: 404 -> Turno no encontrado
