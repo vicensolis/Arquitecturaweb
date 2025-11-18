@@ -16,17 +16,24 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
 
 # Endpoints: 
 ## Medico (/api/medicos):
-* GET /api/medicos -> Lista todos los medicos      
+* GET /api/medicos -> Lista todos los medicos
+  - Respuesta: 200: [{nombre,apellido,dni,especialidad}]      
 * GET /api/medicos/:id -> Obtiene medicos por id
+  - Respuesta: 200: [{nombre,apellido,dni,especialidad}]
+  - Error: 404 -> Medico no encontrado
 * POST /api/medicos -> Crea un nuevo medico
   - Body ejemplo:
-  ```
-  {
-        "nombre": "Pablo",
-        "apellido": "Ledesma",
-        "dni":47894321,
-        "especialidad": "Dermatologo"
-        } 
+    ```
+    {
+          "nombre": "Pablo",
+          "apellido": "Ledesma",
+          "dni":47894321,
+          "especialidad": "Dermatologo"
+          }
+  - Respuesta: 201-> Medico creado
+  - Error: 400 -> Faltan campos
+  - Error 409 -> DNI repetido
+  
 * PUT /api/medicos/:id -> Actualiza los datos de un medico que ya existe
   - Body ejemplo:
     ```
@@ -35,9 +42,19 @@ El negocio para la api va a ser un sistema de turnos medicos, los usuarios podra
           "apellido": "Ledesma",
           "dni":47894321,
           "especialidad": "Traumatologo"
-    }       
+    }
+  - Respuesta:
+  - Respuesta: 200 -> Médico actualizado
+  - Error: 400 -> Faltan campos
+  - Error: 404 -> Médico no encontrado
+
 * DELETE /api/medicos/:id -> Elimina un medico
+  - Respuesta: 204 → Médico eliminado
+  - Error: 404 → Médico no encontrado
+
 * GET /api/medicos/:id/turnos -> Lista los turnos de un medico
+  - Respuesta: 200 → Array de turnos del médico
+  - Error: 404 → Médico no encontrado
           
           
 ## Paciente (/api/pacientes)
